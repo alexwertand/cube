@@ -1,0 +1,136 @@
+@media(min-width: 320px) {
+   .wrap {
+      width: 1170px;
+      height: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: whitesmoke;
+      perspective: 500px;
+      /* transform-style: preserve-3d; */
+  }
+
+  section {
+    position: relative;
+    /* margin-top: 100px; */
+    padding: 200px 0;
+    text-align: center;
+  }
+
+  section:hover .out {
+    animation: cube 7s linear infinite alternate;
+  }
+
+  @keyframes cube {
+    0%, 100% {
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+
+    10% {
+      transform: rotate3d(15, 15, 15, 25deg);
+    }
+
+    20% {
+      transform: rotate3d(25, 25, 25, 55deg);
+    }
+
+    30% {
+      transform: rotate3d(35, 75, 35, 75deg);
+    }
+
+    40% {
+      transform: rotate3d(50, 100, 100, 90deg);
+    }
+
+    50% {
+      transform: rotate3d(75, 125, 125, 120deg);
+    }
+
+    60% {
+      transform: rotate3d(50, 100, 100, 90deg);
+    }
+
+    70% {
+      transform: rotate3d(35, 75, 35, 75deg);
+    }
+
+    80% {
+      transform: rotate3d(25, 25, 25, 55deg);
+    }
+
+    90% {
+      transform: rotate3d(15, 15, 15, 25deg);
+    }
+  }
+
+  .out,
+  .four,
+  .one {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    font-size: 70px;
+    line-height: 200px;
+  }
+
+  .out {
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: rotate3d(5, 50, 100, -353deg); */
+    background-color: rgba(0, 255, 255, 0.25);
+  }
+
+  .one:before {
+    content: "2";
+    transform: rotateY(-90deg);
+    transform-origin: 100% 50%;
+  }
+
+  .one:before,
+  .one:after,
+  .four:before,
+  .four:after {
+    position: absolute;
+    left: -100%;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(127, 255, 212, 0.25);
+  }
+
+  .one:after {
+    content: "3";
+    top: 0;
+    left: 100%;
+    background-color: rgba(250, 235, 215, 0.25);
+    transform: rotateY(90deg);
+    transform-origin: 0 50%;
+  }
+
+  .four {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: red;
+    background-color: rgba(0, 0, 255, 0.25);
+    transform: translateZ(-200px);
+    transform-style: preserve-3d;
+  }
+
+  .four:before {
+    content: "5";
+    left: 0;
+    top: -100%;
+    background-color: rgba(127, 255, 0, 0.25);
+    transform-origin: 50% 100%;
+    transform: rotateX(-90deg);
+  }
+
+  .four:after {
+    content: "6";
+    left: 0;
+    background-color: rgba(0, 255, 255, 0.25);
+    transform-origin: 50% 0;
+    transform: rotateX(90deg);
+  }
+}
