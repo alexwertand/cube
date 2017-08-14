@@ -17,48 +17,21 @@
   }
 
   section:hover .out {
-    animation: cube 7s linear infinite alternate;
+    transform-origin: 0 0;
+    animation: cube 5s ease-in-out infinite alternate;
   }
 
   @keyframes cube {
-    0%, 100% {
-      transform: rotate3d(0, 0, 0, 0deg);
-    }
-
-    10% {
-      transform: rotate3d(15, 15, 15, 25deg);
-    }
-
-    20% {
-      transform: rotate3d(25, 25, 25, 55deg);
-    }
-
-    30% {
-      transform: rotate3d(35, 75, 35, 75deg);
-    }
-
-    40% {
-      transform: rotate3d(50, 100, 100, 90deg);
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
     }
 
     50% {
-      transform: rotate3d(75, 125, 125, 120deg);
+      transform: translate3d(0, 0, -700px) rotateY(360deg);
     }
 
-    60% {
-      transform: rotate3d(50, 100, 100, 90deg);
-    }
-
-    70% {
-      transform: rotate3d(35, 75, 35, 75deg);
-    }
-
-    80% {
-      transform: rotate3d(25, 25, 25, 55deg);
-    }
-
-    90% {
-      transform: rotate3d(15, 15, 15, 25deg);
+    100% {
+      transform: translate3d(0, 0, 100px) rotate(0deg);
     }
   }
 
