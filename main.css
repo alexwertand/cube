@@ -21,7 +21,7 @@
     animation: cube 5s ease-in-out infinite alternate;
   }
 
-  @keyframes cube {
+  /* @keyframes cube {
     0% {
       transform: translate3d(0, 0, 0) rotate(0deg);
     }
@@ -33,7 +33,7 @@
     100% {
       transform: translate3d(0, 0, 100px) rotate(0deg);
     }
-  }
+  } */
 
   .out,
   .four,
